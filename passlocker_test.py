@@ -77,4 +77,15 @@ class CredentialsTest(unittest.TestCase):
         test_credential.store_details()
         self.newSet_credentials.delete_details()
         self.assertEqual(len(Credentials.credentials_list),1)
+
+    def search_credentials_test(self):
+        '''
+        To check possibility of find and displaying credentials
+        ''' 
+
+        self.newSet_credentials.store_details()
+        test_credential = Credentials ('UleMsee', 'H789kfg', 'Instagram')
+        test_credential.store_details()
+        search_credential = Credentials.credentials_search('Instagram')
+        self.assertEqual(search_credential.account, test_credential.account)
         
