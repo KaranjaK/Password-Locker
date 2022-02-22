@@ -51,4 +51,10 @@ class CredentialsTest(unittest.TestCase):
         '''
         self.newSet_credentials.store_details()
         self.assertEqual(len(Credentials.credentials_list),1)
+    
+    def cleanUp(self):
+        '''
+        To clean up after every test case has been run
+        '''
+        Credentials.credentials_list = []
         
