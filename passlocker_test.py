@@ -26,4 +26,9 @@ class UsersTest (unittest.TestCase):
         '''
         self.new_user.new_user()
         self.assertEqual(len(User.user_list),1)
-        
+
+class CredentialsTest(unittest.TestCase):
+    '''
+    Class that defines various test cases for the credentials class
+    '''
+    
