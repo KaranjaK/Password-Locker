@@ -74,4 +74,10 @@ def password_generate():
     autogen_pass = Credentials.passwordGenerator()
     return autogen_pass
 
+def password_copy(account):
+    '''
+    Using pyperclip, it will copy the password of the specified account
+    '''
+    return Credentials.copy_password(account)
+
     
