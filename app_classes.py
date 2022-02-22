@@ -63,4 +63,10 @@ class Credentials():
             '''
             Credentials.credentials_list.append(self)
 
+        def delete_details(self):
+            '''
+            method to delete credentials from the credentials list
+            ''' 
+            Credentials.credentials_list.remove(self)
+
             
