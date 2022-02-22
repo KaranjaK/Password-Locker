@@ -88,4 +88,13 @@ class CredentialsTest(unittest.TestCase):
         test_credential.store_details()
         search_credential = Credentials.credentials_search('Instagram')
         self.assertEqual(search_credential.account, test_credential.account)
-        
+
+    def existance_credentials_test(self):
+        '''
+        To check possibility of getting a false of true reply based on a credential existing or not
+        '''
+        self.newSet_credentials.store_details()
+        test_credential = Credentials ('UleMsee', 'H789kfg', 'Instagram')
+        test_credential.store_details()
+        if_credential_found = Credentials.credentials_existance('Instagram')
+        self.assertTrue(if_credential_found)
