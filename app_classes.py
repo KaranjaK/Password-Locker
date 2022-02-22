@@ -31,8 +31,22 @@ class User:
         '''
         User.user_list.remove(self)
 
-    class Credentials():
+class Credentials():
         '''
         Credentials class will facilitate the creation of new Credential objects
         '''
+        credentials_list = []
+        
+        @classmethod
+        def user_verification(cls,username, password):
+            '''
+            method verifies if user is registered in our list
+            '''
+
+            user_this = ''
+            for user in User.user_list:
+                if(user.username == username and user.password == password):
+                    user_this == user.username
+            return user_this
+
         
