@@ -66,4 +66,12 @@ def credentials_lookup(account):
     To check if there are credentials for an account name and returns true of false based on the outcome
     '''
     return Credentials.credentials_existance(account)
+
+def password_generate():
+    '''
+    To generate a random password for a user
+    '''  
+    autogen_pass = Credentials.passwordGenerator()
+    return autogen_pass
+
     
