@@ -22,3 +22,9 @@ def user_display():
     '''
     return User.user_display()
 
+def user_login(username,password):
+    '''
+    To find out if a user exists and upon existance, it logins the user
+    '''
+    user_check = Credentials.user_verification(username,password)
+    return user_check
