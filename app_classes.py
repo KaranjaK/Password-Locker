@@ -80,7 +80,9 @@ class Credentials():
                 if credential.account == account:
                     return credential
 
-        # @classmethod
-        # def copy_password(cls, account):
-        #     credetials_found = Credentials.credentials_search(account)
-        #     pyperclip.copy(credetials_found.password)
+        @classmethod
+        def copy_password(cls, account):
+            credetials_found = Credentials.credentials_search(account)
+            pyperclip.copy(credetials_found.password)
+
+            
