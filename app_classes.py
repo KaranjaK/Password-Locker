@@ -16,4 +16,11 @@ class User:
         This method will initialize the creation of a new user into the user list
         '''
         User.user_list.append(self)
-        
+
+    
+    @classmethod
+    def user_display(cls):
+        '''
+        method displays the user account details
+        '''
+        return cls.user_list
