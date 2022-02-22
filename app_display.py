@@ -60,3 +60,10 @@ def credentials_search(account):
     To search for credentials using an account and returns the found credentials
     '''
     return Credentials.credentials_search(account)
+
+def credentials_lookup(account):
+    '''
+    To check if there are credentials for an account name and returns true of false based on the outcome
+    '''
+    return Credentials.credentials_existance(account)
+    
