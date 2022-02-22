@@ -24,3 +24,15 @@ class User:
         method displays the user account details
         '''
         return cls.user_list
+    
+    def user_delete(self):
+        '''
+        method will be used to delete a user accout from the list
+        '''
+        User.user_list.remove(self)
+
+    class Credentials():
+        '''
+        Credentials class will facilitate the creation of new Credential objects
+        '''
+        
