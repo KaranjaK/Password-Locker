@@ -8,3 +8,12 @@ def new_user_crearion(username, password):
     '''
     new_user = User(username, password)
     return new_user
+
+
+def store_user(user):
+    '''
+    To store the a newly created user
+    '''
+
+    user.store_user()
+
