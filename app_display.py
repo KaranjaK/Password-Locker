@@ -35,4 +35,10 @@ def new_user_credentials(username, password, account):
     '''
     new_userCredentials = Credentials(username, password, account)
     return new_userCredentials
-    
+
+def save_new_credentials():
+    '''
+    To save new credentials to the credentials list
+    '''
+    Credentials.store_details()
+
