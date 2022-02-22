@@ -48,3 +48,9 @@ def account_details_display():
     '''
     return Credentials.show_credentials()
 
+def credentials_delete(credentials):
+    '''
+    To delete a credential from the credentials list
+    '''
+    credentials.delete_details()
+
