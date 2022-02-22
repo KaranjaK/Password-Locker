@@ -67,4 +67,14 @@ class CredentialsTest(unittest.TestCase):
         test_credential = Credentials ('UleMsee', 'H789kfg', 'Instagram')
         test_credential.store_details()
         self.assertEqual(len(Credentials.credentials_list),2)
+    
+    def credentials_delete_test(self):
+        '''
+        To check posibility of removing credentials from the list
+        '''
+        self.newSet_credentials.store_details()
+        test_credential = Credentials ('UleMsee', 'H789kfg', 'Instagram')
+        test_credential.store_details()
+        self.newSet_credentials.delete_details()
+        self.assertEqual(len(Credentials.credentials_list),1)
         
