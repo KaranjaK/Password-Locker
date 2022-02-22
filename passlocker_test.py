@@ -37,3 +37,11 @@ class CredentialsTest(unittest.TestCase):
         '''
         self.newSet_credentials = Credentials('KaranjaK','K74@yea', 'Email')
     
+    def initialize_test(self):
+        '''
+        To check if the Credentials have been initialized correctly
+        '''
+        self.assertEqual(self.newSet_credentials.username, 'KaranjaK')
+        self.assertEqual(self.newSet_credentials.password, 'K74@yea')
+        self.assertEqual(self.newSet_credentials.account, 'Email')
+        
