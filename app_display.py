@@ -14,6 +14,11 @@ def store_user(user):
     '''
     To store the a newly created user
     '''
-
     user.store_user()
+
+def user_display():
+    '''
+    To show an existing user
+    '''
+    return User.user_display()
 
