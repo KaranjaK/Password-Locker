@@ -42,3 +42,9 @@ def save_new_credentials():
     '''
     Credentials.store_details()
 
+def account_details_display():
+    '''
+    To display all details saved about all saved accounts
+    '''
+    return Credentials.show_credentials()
+
