@@ -1,3 +1,4 @@
+from curses.ascii import CR
 from hashlib import new
 from app_classes import User
 from app_classes import Credentials
@@ -54,3 +55,8 @@ def credentials_delete(credentials):
     '''
     credentials.delete_details()
 
+def credentials_search(account):
+    '''
+    To search for credentials using an account and returns the found credentials
+    '''
+    return Credentials.credentials_search(account)
