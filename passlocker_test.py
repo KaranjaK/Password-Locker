@@ -104,3 +104,6 @@ class CredentialsTest(unittest.TestCase):
         To clean up after every test case has been run
         '''
         Credentials.credentials_list = []
+    
+if __name__ == '__main__':
+    unittest.main()
