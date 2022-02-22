@@ -28,3 +28,11 @@ def user_login(username,password):
     '''
     user_check = Credentials.user_verification(username,password)
     return user_check
+
+def new_user_credentials(username, password, account):
+    '''
+    To create new credentials for a specific user account
+    '''
+    new_userCredentials = Credentials(username, password, account)
+    return new_userCredentials
+    
