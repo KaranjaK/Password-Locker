@@ -31,4 +31,9 @@ class CredentialsTest(unittest.TestCase):
     '''
     Class that defines various test cases for the credentials class
     '''
+    def user(self):
+        '''
+        Very first test to test if individual test methods run
+        '''
+        self.newSet_credentials = Credentials('KaranjaK','K74@yea', 'Email')
     
