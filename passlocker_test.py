@@ -52,12 +52,6 @@ class CredentialsTest(unittest.TestCase):
         '''
         self.newSet_credentials.store_details()
         self.assertEqual(len(Credentials.credentials_list),1)
-    
-    def cleanUp(self):
-        '''
-        To clean up after every test case has been run
-        '''
-        Credentials.credentials_list = []
 
     def multiple_account_storing(self):
         '''
@@ -98,3 +92,15 @@ class CredentialsTest(unittest.TestCase):
         test_credential.store_details()
         if_credential_found = Credentials.credentials_existance('Instagram')
         self.assertTrue(if_credential_found)
+
+    def display_all_credentials_test(self):
+        '''
+        To display all saved credentials
+        '''
+        self.assertEqual(Credentials.show_credentials(), Credentials.credentials_list)
+
+    def cleanUp(self):
+        '''
+        To clean up after every test case has been run
+        '''
+        Credentials.credentials_list = []
