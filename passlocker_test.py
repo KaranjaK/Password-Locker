@@ -1,3 +1,4 @@
+from cgi import test
 import unittest
 from app_classes import User
 from app_classes import Credentials
@@ -57,4 +58,13 @@ class CredentialsTest(unittest.TestCase):
         To clean up after every test case has been run
         '''
         Credentials.credentials_list = []
+
+    def multiple_account_storing(self):
+        '''
+        To check on possiblity of saving multiple credentials on the credentials list
+        '''
+        self.newSet_credentials.store_details()
+        test_credential = Credentials ('UleMsee', 'H789kfg', 'Instagram')
+        test_credential.store_details()
+        self.assertEqual(len(Credentials.credentials_list),2)
         
