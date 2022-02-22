@@ -1,3 +1,5 @@
+import pyperclip
+
 class User:
     '''
     This will create a Users class whereby a new instance of user will be generated.
@@ -78,7 +80,7 @@ class Credentials():
                 if credential.account == account:
                     return credential
 
-        # # @classmethod
+        # @classmethod
         # def copy_password(cls, account):
         #     credetials_found = Credentials.credentials_search(account)
         #     pyperclip.copy(credetials_found.password)
