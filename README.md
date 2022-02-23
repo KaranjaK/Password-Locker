@@ -7,7 +7,7 @@
 #### *Kelvin Karanja*
 
 ## Screenshot
-(https://github.com/KaranjaK/Password-Locker/blob/master/Images/p1.png)
+<img src='https://github.com/KaranjaK/Password-Locker/blob/master/Images/p1.png'>
 
 ## User Stories
 The user would like to.... :
