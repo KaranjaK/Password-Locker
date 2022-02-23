@@ -4,6 +4,15 @@ from re import T
 from app_classes import User
 from app_classes import Credentials
 
+def display():
+	print("               ____      G.R.I.T            _____  _                               ")
+	print("              |  _ \ Greatness Requires    / ____|| |                              ")
+	print("              | |_) ) Intenal Toughness!  / ____  | |__    _____  _ _  ____        ")
+	print("              |  __/  / _  |/ __  / __    \___  \ |  __)  /  _  \| '_|/ __ \       ")
+	print("              | |    / (_| |\__ \ \__ \    ___  / | |___ (  (_)  ) | |  ___/       ")
+	print("              |_|    \_____| ___/  ___/   |____/  |_____) \_____/|_|  \____        ")
+display()
+
 def new_user_creation(username, password):
     '''
     To create a new user with a user name and password
