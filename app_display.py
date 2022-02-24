@@ -98,11 +98,18 @@ def password_locker():
         print ('*' * 40)
         username = input('UserName: ')
         while True:
-            print('Key in TP - To type in your wown password:\n GP - For a randomly generated password')
+            print('Key in TP - To type in your own password:\n GP - For a randomly generated password')
             password_choice = input().lower().strip()
             if password_choice == 'tp':
-                password = input('Enter Your Password\n')
-                break
+                password1 = input('Enter Your Password\n')
+                passwordre = input('Kindly enter your password again\n')
+                if password1 == passwordre:
+                    password = password1
+                    break
+                else:
+                    print('*' * 40)
+                    print('Your Passwords do not match. Kindly try again')
+                    print('*' * 40)                
             elif password_choice == 'gp':
                 password = password_generate()
                 break
