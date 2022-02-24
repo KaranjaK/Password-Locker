@@ -61,10 +61,13 @@ class Credentials():
             self.password = password
             self.account = account
 
-        def store_details(self):
+        def store_details(self,account, username, password):
             ''''
             method to store user's credentials in the list of credentials 
             '''
+            self.username = username
+            self.password = password
+            self.account = account
             Credentials.credentials_list.append(self)
 
         def delete_details(self):
