@@ -49,25 +49,25 @@ class CredentialsTest(unittest.TestCase):
         '''
         To check if the credentials have been saved into the credentials list
         '''
-        self.newSet_credentials.store_details()
+        self.newSet_credentials.store_details('Instagram', 'UleMsee', 'H789kfg')
         self.assertEqual(len(Credentials.credentials_list),8)
 
     def test_multiple_account_storing(self):
         '''
         To check on possiblity of saving multiple credentials on the credentials list
         '''
-        self.newSet_credentials.store_details()
-        test_credential = Credentials ('UleMsee', 'H789kfg', 'Instagram')
-        test_credential.store_details()
+        self.newSet_credentials.store_details('Instagram', 'UleMsee', 'H789kfg')
+        test_credential = Credentials ('Instagram','UleMsee', 'H789kfg')
+        test_credential.store_details('Instagram', 'UleMsee', 'H789kfg')
         self.assertEqual(len(Credentials.credentials_list),5)
     
     def test_credentials_delete(self):
         '''
         To check posibility of removing credentials from the list
         '''
-        self.newSet_credentials.store_details()        
-        test_credential = Credentials ('UleMsee', 'H789kfg', 'Instagram')
-        test_credential.store_details()
+        self.newSet_credentials.store_details('Instagram', 'UleMsee', 'H789kfg')        
+        test_credential = Credentials ('Instagram', 'UleMsee', 'H789kfg')
+        test_credential.store_details('Instagram', 'UleMsee', 'H789kfg')
         self.newSet_credentials.delete_details()
         self.assertEqual(len(Credentials.credentials_list),1)
 
@@ -76,9 +76,9 @@ class CredentialsTest(unittest.TestCase):
         To check possibility of find and displaying credentials
         ''' 
 
-        self.newSet_credentials.store_details()
-        test_credential = Credentials ('UleMsee', 'H789kfg', 'Instagram')
-        test_credential.store_details()
+        self.newSet_credentials.store_details('Instagram', 'UleMsee', 'H789kfg')
+        test_credential = Credentials ('Instagram', 'UleMsee', 'H789kfg')
+        test_credential.store_details('Instagram', 'UleMsee', 'H789kfg')
         search_credential = Credentials.credentials_search('Instagram')
         self.assertEqual(search_credential.account, test_credential.account)
 
@@ -86,9 +86,9 @@ class CredentialsTest(unittest.TestCase):
         '''
         To check possibility of getting a false of true reply based on a credential existing or not
         '''
-        self.newSet_credentials.store_details()
-        test_credential = Credentials ('UleMsee', 'H789kfg', 'Instagram')
-        test_credential.store_details()
+        self.newSet_credentials.store_details('Instagram', 'UleMsee', 'H789kfg')
+        test_credential = Credentials ('Instagram', 'UleMsee', 'H789kfg')
+        test_credential.store_details('Instagram', 'UleMsee', 'H789kfg')
         if_credential_found = Credentials.credentials_existance('Instagram')
         self.assertTrue(if_credential_found)
 
