@@ -1,6 +1,8 @@
 from curses.ascii import CR
 from hashlib import new
 from re import T
+
+from paramiko import PasswordRequiredException
 from app_classes import User
 from app_classes import Credentials
 
@@ -47,11 +49,11 @@ def new_user_credentials(username, password, account):
     new_userCredentials = Credentials(username, password, account)
     return new_userCredentials
 
-def save_new_credentials():
+def save_new_credentials(account, username, password):
     '''
     To save new credentials to the credentials list
     '''
-    Credentials.store_details()
+    Credentials.store_details(account, username, password)
 
 def account_details_display():
     '''
@@ -127,7 +129,7 @@ def password_locker():
         username = input('User Name: ')
         password = input('Password: ')
         login = user_login(username, password)
-        if user_login == login:
+        if user_login(username,password) == login:
             print(f'Hello {username}. Welcome to your Password Store Manager\n')
 
             while True:
